@@ -1,0 +1,12 @@
+---------------------------  F281x_PLC.pjt - Debug  ---------------------------
+[DSP281x_CSMPasswords.asm] "E:\XHS\Program\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -g -fr"F:/WorkSpace/VS/sPLC/DSPPLC/project/F281x_PLC/Debug" -i"F:/WorkSpace/VS/sPLC/DSPPLC/project/F281x_PLC/../../DSP281x_headers/include" -i"F:/WorkSpace/VS/sPLC/DSPPLC/project/F281x_PLC/../../../PLCCore" -i"F:/WorkSpace/VS/sPLC/DSPPLC/project/F281x_PLC/../../MyLib" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"../../project/F281x_PLC/Debug.lkf" "DSP281x_CSMPasswords.asm"
+
+[Linking...] "E:\XHS\Program\CCStudio_v3.3\C2000\cgtools\bin\cl2000" -@"Debug.lkf"
+<Linking>
+>> warning: creating output section ramfuncs without SECTIONS specification
+>> warning: load address of uninitialized section .const ignored
+>> warning: load address of uninitialized section .switch ignored
+>> warning: entry point other than _c_int00 specified
+
+Build Complete,
+  0 Errors, 4 Warnings, 0 Remarks.

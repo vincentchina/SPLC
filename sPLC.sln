@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plccore", "project\plccore\plccore.vcxproj", "{C09AB63E-6EEF-4F32-97D5-12A0D9845A34}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PLCSimulation", "project\PLCSimulation\PLCSimulation.vcxproj", "{6B651B61-5962-46E9-8F0F-384DBAAD4F01}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3C1230-0500-4F04-A3B9-024971051953} = {BD3C1230-0500-4F04-A3B9-024971051953}
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34} = {C09AB63E-6EEF-4F32-97D5-12A0D9845A34}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlcEditor", "project\PlcEditor\PlcEditor.vcxproj", "{83794654-41F6-446E-9182-6378D2403BC0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BD3C1230-0500-4F04-A3B9-024971051953} = {BD3C1230-0500-4F04-A3B9-024971051953}
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34} = {C09AB63E-6EEF-4F32-97D5-12A0D9845A34}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libx", "libx\project\libx.vcxproj", "{7C28B39C-D03C-4F85-B40A-A024F7165EAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plcc", "project\plcc\plcc.vcxproj", "{BD3C1230-0500-4F04-A3B9-024971051953}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34}.Debug|Win32.Build.0 = Debug|Win32
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34}.Release|Win32.ActiveCfg = Release|Win32
+		{C09AB63E-6EEF-4F32-97D5-12A0D9845A34}.Release|Win32.Build.0 = Release|Win32
+		{6B651B61-5962-46E9-8F0F-384DBAAD4F01}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B651B61-5962-46E9-8F0F-384DBAAD4F01}.Debug|Win32.Build.0 = Debug|Win32
+		{6B651B61-5962-46E9-8F0F-384DBAAD4F01}.Release|Win32.ActiveCfg = Release|Win32
+		{6B651B61-5962-46E9-8F0F-384DBAAD4F01}.Release|Win32.Build.0 = Release|Win32
+		{83794654-41F6-446E-9182-6378D2403BC0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{83794654-41F6-446E-9182-6378D2403BC0}.Debug|Win32.Build.0 = Debug|Win32
+		{83794654-41F6-446E-9182-6378D2403BC0}.Release|Win32.ActiveCfg = Release|Win32
+		{83794654-41F6-446E-9182-6378D2403BC0}.Release|Win32.Build.0 = Release|Win32
+		{7C28B39C-D03C-4F85-B40A-A024F7165EAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C28B39C-D03C-4F85-B40A-A024F7165EAB}.Debug|Win32.Build.0 = Debug|Win32
+		{7C28B39C-D03C-4F85-B40A-A024F7165EAB}.Release|Win32.ActiveCfg = Release|Win32
+		{7C28B39C-D03C-4F85-B40A-A024F7165EAB}.Release|Win32.Build.0 = Release|Win32
+		{BD3C1230-0500-4F04-A3B9-024971051953}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BD3C1230-0500-4F04-A3B9-024971051953}.Debug|Win32.Build.0 = Debug|Win32
+		{BD3C1230-0500-4F04-A3B9-024971051953}.Release|Win32.ActiveCfg = Release|Win32
+		{BD3C1230-0500-4F04-A3B9-024971051953}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

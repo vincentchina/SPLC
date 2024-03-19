@@ -1,0 +1,61 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="F:\WorkSpace\VS\sPLC\DSPPLC\project\F281x_PLC\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\..\PLCCore\DSP.c"
+Source="..\..\..\PLCCore\MemManager.c"
+Source="..\..\..\PLCCore\PLCCore.c"
+Source="..\..\..\PLCCore\plcprg.c"
+Source="..\..\..\PLCCore\Protocol.c"
+Source="..\..\DSP281x_headers\source\DSP281x_CpuTimers.c"
+Source="..\..\DSP281x_headers\source\DSP281x_CSMPasswords.asm"
+Source="..\..\DSP281x_headers\source\DSP281x_DefaultIsr.c"
+Source="..\..\DSP281x_headers\source\DSP281x_GlobalVariableDefs.c"
+Source="..\..\DSP281x_headers\source\DSP281x_Gpio.c"
+Source="..\..\DSP281x_headers\source\DSP281x_InitPeripherals.c"
+Source="..\..\DSP281x_headers\source\DSP281x_PieCtrl.c"
+Source="..\..\DSP281x_headers\source\DSP281x_PieVect.c"
+Source="..\..\DSP281x_headers\source\DSP281x_Sci.c"
+Source="..\..\DSP281x_headers\source\DSP281x_SysCtrl.c"
+Source="..\..\DSP281x_headers\source\DSP281x_usDelay.asm"
+Source="..\..\DSP281x_headers\source\DSP281x_Xintf.c"
+Source="..\..\Flash2Ram\DSP28xxx_CodeStartBranch.asm"
+Source="..\..\Flash2Ram\DSP28xxx_SectionCopy_nonBIOS.asm"
+Source="..\..\MyLib\lib_Sci.c"
+Source="..\..\user\DSPMain.c"
+Source="..\..\cmd\F281x\F281x_nonBIOS_flash.cmd"
+Source="..\..\DSP281x_headers\cmd\DSP281x_Headers_nonBIOS.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -fr"$(Proj_dir)\Debug" -i"$(Proj_dir)\..\..\DSP281x_headers\include" -i"$(Proj_dir)\..\..\..\PLCCore" -i"$(Proj_dir)\..\..\MyLib" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-o3 -fr"$(Proj_dir)\Release" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-c -ecode_start -heap0x400 -m".\Debug\F281x_PLC.map" -o".\Debug\F281x_PLC.out" -stack0x400 -w -x -l"rts2800_ml.lib"
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\F281x_PLC.map" -o".\Release\F281x_PLC.out" -w -x
+
+["..\..\cmd\F281x\F281x_nonBIOS_flash.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\..\cmd\F281x\F281x_nonBIOS_flash.cmd" Settings: "Release"]
+LinkOrder=1
+
+["..\..\DSP281x_headers\cmd\DSP281x_Headers_nonBIOS.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["..\..\DSP281x_headers\cmd\DSP281x_Headers_nonBIOS.cmd" Settings: "Release"]
+LinkOrder=1
+

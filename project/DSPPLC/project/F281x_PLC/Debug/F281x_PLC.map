@@ -1,0 +1,752 @@
+******************************************************************************
+        TMS320C2000 COFF Linker PC v4.1.3                      
+******************************************************************************
+>> Linked Sat Aug 01 16:28:56 2015
+
+OUTPUT FILE NAME:   <./Debug/F281x_PLC.out>
+ENTRY POINT SYMBOL: "code_start"  address: 003f7ff6
+
+
+MEMORY CONFIGURATION
+
+                  name            origin    length      used    attr    fill
+         ----------------------  --------  ---------  --------  ----  --------
+PAGE  0: RAM_L0L1                00008000   00002000  000019cf  RWIX
+         OTP                     003d7800   00000400  00000000  RWIX
+         FLASH_IJ                003d8000   00004000  00000000  RWIX
+         FLASH_GH                003dc000   00008000  00000000  RWIX
+         FLASH_EF                003e4000   00008000  00000000  RWIX
+         FLASH_CD                003ec000   00008000  00000000  RWIX
+         FLASH_AB                003f4000   00003f80  00001bbb  RWIX
+         CSM_RSVD                003f7f80   00000076  00000076  RWIX
+         BEGIN_FLASH             003f7ff6   00000002  00000002  RWIX
+         CSM_PWL                 003f7ff8   00000008  00000008  RWIX
+         RAM_H0                  003f8000   00002000  0000170c  RWIX
+         ROM                     003ff000   00000fc0  00000000  RWIX
+         RESET                   003fffc0   00000002  00000000  RWIX
+         VECTORS                 003fffc2   0000003e  00000004  RWIX
+
+PAGE  1: RAMM0                   00000000   00000400  00000400  RWIX
+         BOOT_RSVD               00000400   00000080  00000000  RWIX
+         RAMM1                   00000480   00000380  00000000  RWIX
+         DEV_EMU                 00000880   00000180  000000d0  RWIX
+         FLASH_REGS              00000a80   00000060  00000008  RWIX
+         CSM                     00000ae0   00000010  00000010  RWIX
+         XINTF                   00000b20   00000020  00000020  RWIX
+         CPU_TIMER0              00000c00   00000008  00000008  RWIX
+         PIE_CTRL                00000ce0   00000020  0000001a  RWIX
+         PIE_VECT                00000d00   00000100  00000100  RWIX
+         ECANA                   00006000   00000040  00000034  RWIX
+         ECANA_LAM               00006040   00000040  00000040  RWIX
+         ECANA_MOTS              00006080   00000040  00000040  RWIX
+         ECANA_MOTO              000060c0   00000040  00000040  RWIX
+         ECANA_MBOX              00006100   00000100  00000100  RWIX
+         SYSTEM                  00007010   00000020  00000020  RWIX
+         SPIA                    00007040   00000010  00000010  RWIX
+         SCIA                    00007050   00000010  00000010  RWIX
+         XINTRUPT                00007070   00000010  00000010  RWIX
+         GPIOMUX                 000070c0   00000020  00000020  RWIX
+         GPIODAT                 000070e0   00000020  00000020  RWIX
+         ADC                     00007100   00000020  0000001a  RWIX
+         EVA                     00007400   00000040  00000032  RWIX
+         EVB                     00007500   00000040  00000032  RWIX
+         SCIB                    00007750   00000010  00000010  RWIX
+         MCBSPA                  00007800   00000040  00000025  RWIX
+         ZONE2                   00080000   00040000  00000000  RWIX
+         CSM_PWL                 003f7ff8   00000008  00000008  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.const     0    ffffffff    00000000     UNINITIALIZED
+
+.switch    0    ffffffff    00000000     UNINITIALIZED
+
+.pinit     0    003f4000    00000000     UNINITIALIZED
+
+.text      0    003f4000    000019cf     RUN ADDR = 00008000
+                  003f4000    00000044     rts2800_ml.lib : boot.obj (.text)
+                  003f4044    0000004a                    : exit.obj (.text)
+                  003f408e    00000009                    : _lock.obj (.text)
+                  003f4097    00000014                    : args_main.obj (.text)
+                  003f40ab    000007c3     DSP.obj (.text)
+                  003f486e    0000004b     DSP281x_CpuTimers.obj (.text)
+                  003f48b9    0000014f     DSP281x_DefaultIsr.obj (.text)
+                  003f4a08    0000000d     DSP281x_Gpio.obj (.text)
+                  003f4a15    00000005     DSP281x_InitPeripherals.obj (.text)
+                  003f4a1a    00000028     DSP281x_PieCtrl.obj (.text)
+                  003f4a42    00000020     DSP281x_PieVect.obj (.text)
+                  003f4a62    00000001     DSP281x_Sci.obj (.text)
+                  003f4a63    00000099     DSP281x_SysCtrl.obj (.text)
+                  003f4afc    00000078     DSP281x_Xintf.obj (.text)
+                  003f4b74    0000013f     DSPMain.obj (.text)
+                  003f4cb3    00000264     lib_Sci.obj (.text)
+                  003f4f17    000001c4     MemManager.obj (.text)
+                  003f50db    000004fd     PLCCore.obj (.text)
+                  003f55d8    00000297     Protocol.obj (.text)
+                  003f586f    00000083     rts2800_ml.lib : fs_div.obj (.text)
+                  003f58f2    0000005a                    : fs_mpy.obj (.text)
+                  003f594c    00000029                    : fs_tol.obj (.text)
+                  003f5975    0000001d                    : fs_tou.obj (.text)
+                  003f5992    0000000f                    : memset.obj (.text)
+                  003f59a1    0000000b                    : u_div.obj (.text)
+                  003f59ac    00000010                    : u_tofs.obj (.text)
+                  003f59bc    00000013                    : ul_tofs.obj (.text)
+
+.econst    0    003f59d0    00000150     RUN ADDR = 003f9564
+                  003f59d0    00000100     DSP281x_PieVect.obj (.econst)
+                  003f5ad0    00000020     PLCCore.obj (.econst)
+                  003f5af0    00000020     DSP.obj (.econst)
+                  003f5b10    00000010     DSPMain.obj (.econst)
+
+.cinit     0    003f5b20    00000058     RUN ADDR = 003f96b4
+                  003f5b20    0000000e     rts2800_ml.lib : exit.obj (.cinit)
+                  003f5b2e    0000000a                    : _lock.obj (.cinit)
+                  003f5b38    0000000a     DSPMain.obj (.cinit)
+                  003f5b42    00000005     lib_Sci.obj (.cinit)
+                  003f5b47    00000005     PLCCore.obj (.cinit)
+                  003f5b4c    00000026     plcprg.obj (.cinit)
+                  003f5b72    00000005     Protocol.obj (.cinit)
+                  003f5b77    00000001     --HOLE-- [fill = 0]
+
+copysections 
+*          0    003f5b78    0000003c     
+                  003f5b78    0000003c     DSP28xxx_SectionCopy_nonBIOS.obj (copysections)
+
+wddisable 
+*          0    003f5bb4    00000008     
+                  003f5bb4    00000008     DSP28xxx_CodeStartBranch.obj (wddisable)
+
+csm_rsvd   0    003f7f80    00000076     
+                  003f7f80    00000076     DSP281x_CSMPasswords.obj (csm_rsvd)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     DSP28xxx_CodeStartBranch.obj (codestart)
+
+csmpasswds 
+*          0    003f7ff8    00000008     
+                  003f7ff8    00000008     DSP281x_CSMPasswords.obj (csmpasswds)
+
+.ebss      0    003f8000    00001564     UNINITIALIZED
+                  003f8000    000013a2     PLCCore.obj (.ebss)
+                  003f93a2    00000014     DSPMain.obj (.ebss)
+                  003f93b6    00000008     DSP281x_CpuTimers.obj (.ebss)
+                  003f93c0    00000080     rts2800_ml.lib : exit.obj (.ebss)
+                  003f9440    0000004c     Protocol.obj (.ebss)
+                  003f948c    00000004     rts2800_ml.lib : _lock.obj (.ebss)
+                  003f9490    00000004     lib_Sci.obj (.ebss)
+                  003f94c0    000000a4     plcprg.obj (.ebss)
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot.obj (.reset)
+
+vectors    0    003fffc2    00000000     DSECT
+
+ramfuncs   0    003fffc2    00000004     
+                  003fffc2    00000004     DSP281x_usDelay.obj (ramfuncs)
+
+.data      1    00000000    00000000     UNINITIALIZED
+
+.bss       1    00000000    00000000     UNINITIALIZED
+
+.stack     1    00000000    00000400     UNINITIALIZED
+
+.esysmem   1    00000480    00000000     UNINITIALIZED
+
+DevEmuRegsFile 
+*          1    00000880    000000d0     UNINITIALIZED
+                  00000880    000000d0     DSP281x_GlobalVariableDefs.obj (DevEmuRegsFile)
+
+FlashRegsFile 
+*          1    00000a80    00000008     UNINITIALIZED
+                  00000a80    00000008     DSP281x_GlobalVariableDefs.obj (FlashRegsFile)
+
+CsmRegsFile 
+*          1    00000ae0    00000010     UNINITIALIZED
+                  00000ae0    00000010     DSP281x_GlobalVariableDefs.obj (CsmRegsFile)
+
+XintfRegsFile 
+*          1    00000b20    00000020     UNINITIALIZED
+                  00000b20    00000020     DSP281x_GlobalVariableDefs.obj (XintfRegsFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     DSP281x_GlobalVariableDefs.obj (CpuTimer0RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     DSP281x_GlobalVariableDefs.obj (PieCtrlRegsFile)
+
+PieVectTableFile 
+*          1    00000d00    00000100     UNINITIALIZED
+                  00000d00    00000100     DSP281x_GlobalVariableDefs.obj (PieVectTableFile)
+
+ECanaRegsFile 
+*          1    00006000    00000034     UNINITIALIZED
+                  00006000    00000034     DSP281x_GlobalVariableDefs.obj (ECanaRegsFile)
+
+ECanaLAMRegsFile 
+*          1    00006040    00000040     UNINITIALIZED
+                  00006040    00000040     DSP281x_GlobalVariableDefs.obj (ECanaLAMRegsFile)
+
+ECanaMOTSRegsFile 
+*          1    00006080    00000040     UNINITIALIZED
+                  00006080    00000040     DSP281x_GlobalVariableDefs.obj (ECanaMOTSRegsFile)
+
+ECanaMOTORegsFile 
+*          1    000060c0    00000040     UNINITIALIZED
+                  000060c0    00000040     DSP281x_GlobalVariableDefs.obj (ECanaMOTORegsFile)
+
+ECanaMboxesFile 
+*          1    00006100    00000100     UNINITIALIZED
+                  00006100    00000100     DSP281x_GlobalVariableDefs.obj (ECanaMboxesFile)
+
+SysCtrlRegsFile 
+*          1    00007010    00000020     UNINITIALIZED
+                  00007010    00000020     DSP281x_GlobalVariableDefs.obj (SysCtrlRegsFile)
+
+SpiaRegsFile 
+*          1    00007040    00000010     UNINITIALIZED
+                  00007040    00000010     DSP281x_GlobalVariableDefs.obj (SpiaRegsFile)
+
+SciaRegsFile 
+*          1    00007050    00000010     UNINITIALIZED
+                  00007050    00000010     DSP281x_GlobalVariableDefs.obj (SciaRegsFile)
+
+XIntruptRegsFile 
+*          1    00007070    00000010     UNINITIALIZED
+                  00007070    00000010     DSP281x_GlobalVariableDefs.obj (XIntruptRegsFile)
+
+GpioMuxRegsFile 
+*          1    000070c0    00000020     UNINITIALIZED
+                  000070c0    00000020     DSP281x_GlobalVariableDefs.obj (GpioMuxRegsFile)
+
+GpioDataRegsFile 
+*          1    000070e0    00000020     UNINITIALIZED
+                  000070e0    00000020     DSP281x_GlobalVariableDefs.obj (GpioDataRegsFile)
+
+AdcRegsFile 
+*          1    00007100    0000001a     UNINITIALIZED
+                  00007100    0000001a     DSP281x_GlobalVariableDefs.obj (AdcRegsFile)
+
+EvaRegsFile 
+*          1    00007400    00000032     UNINITIALIZED
+                  00007400    00000032     DSP281x_GlobalVariableDefs.obj (EvaRegsFile)
+
+EvbRegsFile 
+*          1    00007500    00000032     UNINITIALIZED
+                  00007500    00000032     DSP281x_GlobalVariableDefs.obj (EvbRegsFile)
+
+ScibRegsFile 
+*          1    00007750    00000010     UNINITIALIZED
+                  00007750    00000010     DSP281x_GlobalVariableDefs.obj (ScibRegsFile)
+
+McbspaRegsFile 
+*          1    00007800    00000025     UNINITIALIZED
+                  00007800    00000025     DSP281x_GlobalVariableDefs.obj (McbspaRegsFile)
+
+CsmPwlFile 
+*          1    003f7ff8    00000008     UNINITIALIZED
+                  003f7ff8    00000008     DSP281x_GlobalVariableDefs.obj (CsmPwlFile)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000000   .bss
+00000000   .data
+00008000   .text
+0000806a   C$$EXIT
+0000986f   FS$$DIV
+000098f2   FS$$MPY
+0000994c   FS$$TOL
+00009975   FS$$TOU
+000099a1   U$$DIV
+000099a6   U$$MOD
+000099ac   U$$TOFS
+000099bc   UL$$TOFS
+0000892c   _ADCINT_ISR
+00009847   _API_InitProtocol
+00009547   _API_InitSystem
+0000950b   _API_IsPLCRuning
+000082dc   _API_LoadProgram
+0000959c   _API_PLCRun
+000083c9   _API_PLCScan
+00009513   _API_ProGramRead
+00009526   _API_ProGramWrite
+000097c4   _API_Protocol
+00009634   _API_ProtocolSend
+00009471   _API_ReadBit
+0000949f   _API_ReadData
+000095bd   _API_SetComWriteFun
+000095c8   _API_SetOutputFun
+000095d0   _API_SetUpdatIOMapFun
+000092e8   _API_TimerUp
+000083b6   _API_UnLoadProgram
+00009538   _API_UninitSystem
+00009486   _API_WriteBit
+000094d6   _API_WriteData
+00007100   _AdcRegs
+0000922d   _AddToTimerList
+000095f4   _Asiic2Hex
+000091ad   _BitDeQueue
+0000918f   _BitEnQueue
+0000917a   _BitQueueInit
+0000913a   _BitStackInit
+00009167   _BitStackPop
+00009150   _BitStackPush
+00009170   _BitStackRead
+00008972   _CAPINT1_ISR
+00008977   _CAPINT2_ISR
+0000897c   _CAPINT3_ISR
+000089b8   _CAPINT4_ISR
+000089bd   _CAPINT5_ISR
+000089c2   _CAPINT6_ISR
+0000893b   _CMP1INT_ISR
+00008940   _CMP2INT_ISR
+00008945   _CMP3INT_ISR
+00008981   _CMP4INT_ISR
+00008986   _CMP5INT_ISR
+0000898b   _CMP6INT_ISR
+00008885   _ConfigCpuTimer
+003f93b6   _CpuTimer0
+00000c00   _CpuTimer0Regs
+003f7ff8   _CsmPwl
+00000ae0   _CsmRegs
+00008acb   _CsmUnlock
+000088c3   _DATALOG_ISR
+003fffc2   _DSP28x_usDelay
+00000880   _DevEmuRegs
+00008a8c   _DisableDog
+000089ef   _ECAN0INTA_ISR
+000089f4   _ECAN1INTA_ISR
+00006040   _ECanaLAMRegs
+000060c0   _ECanaMOTORegs
+00006080   _ECanaMOTSRegs
+00006100   _ECanaMboxes
+00006000   _ECanaRegs
+000089f9   _EMPTY_ISR
+000088cd   _EMUINT_ISR
+00008a39   _EnableInterrupts
+00007400   _EvaRegs
+00007500   _EvbRegs
+00000a80   _FlashRegs
+00008f17   _GetBitMapSize
+00008f49   _GetByteMapSize
+000070e0   _GpioDataRegs
+000070c0   _GpioMuxRegs
+000088d7   _ILLEGAL_ISR
+000088b9   _INT13_ISR
+000088be   _INT14_ISR
+00008b9f   _ISRTimer0
+0000886e   _InitCpuTimers
+00008a6b   _InitFlash
+00008a08   _InitGpio
+00008ab1   _InitPeripheralClocks
+00008a15   _InitPeripherals
+00008a1a   _InitPieCtrl
+00008a42   _InitPieVectTable
+00008a94   _InitPll
+00008a62   _InitSci
+00008a63   _InitSysCtrl
+00008afc   _InitXintf
+003f93a2   _KEY_SEL_REG
+00008a82   _KickDog
+003f93a4   _LEDReg
+000089d1   _MRINTA_ISR
+000089d6   _MXINTA_ISR
+00009212   _MallcoTimerNod
+00007800   _McbspaRegs
+000088d2   _NMI_ISR
+00008918   _PDPINTA_ISR
+0000891d   _PDPINTB_ISR
+000089fe   _PIE_RESERVED
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+003f9564   _PieVectTableInit
+00009687   _ProcessData
+00008b92   _ProtocolSend
+000088c8   _RTOSINT_ISR
+00009281   _ReMoveTimerNod
+000092cb   _ResetTimerList
+000089db   _SCIRXINTA_ISR
+000089e5   _SCIRXINTB_ISR
+000089e0   _SCITXINTA_ISR
+000089ea   _SCITXINTB_ISR
+000089c7   _SPIRXINTA_ISR
+000089cc   _SPITXINTA_ISR
+00008ef1   _Sci_DbufSend
+00008db0   _Sci_Init
+00007050   _SciaRegs
+00007750   _ScibRegs
+0000984e   _SetProtocolConf
+00007040   _SpiaRegs
+000091c9   _StackInit
+000091f8   _StackPop
+000091df   _StackPush
+00009201   _StackRead
+000081d0   _StrReadData
+00007010   _SysCtrlRegs
+0000894f   _T1CINT_ISR
+00008959   _T1OFINT_ISR
+0000894a   _T1PINT_ISR
+00008954   _T1UFINT_ISR
+00008963   _T2CINT_ISR
+0000896d   _T2OFINT_ISR
+0000895e   _T2PINT_ISR
+00008968   _T2UFINT_ISR
+00008995   _T3CINT_ISR
+0000899f   _T3OFINT_ISR
+00008990   _T3PINT_ISR
+0000899a   _T3UFINT_ISR
+000089a9   _T4CINT_ISR
+000089b3   _T4OFINT_ISR
+000089a4   _T4PINT_ISR
+000089ae   _T4UFINT_ISR
+00008931   _TINT0_ISR
+00008909   _USER10_ISR
+0000890e   _USER11_ISR
+00008913   _USER12_ISR
+000088dc   _USER1_ISR
+000088e1   _USER2_ISR
+000088e6   _USER3_ISR
+000088eb   _USER4_ISR
+000088f0   _USER5_ISR
+000088f5   _USER6_ISR
+000088fa   _USER7_ISR
+000088ff   _USER8_ISR
+00008904   _USER9_ISR
+00009401   _UpdateLastStata
+00008f5e   _UpdateMem
+000093b6   _UpdateRegBlocksz
+000093d7   _UpdateStata
+00008936   _WAKEINT_ISR
+00008922   _XINT1_ISR
+00008927   _XINT2_ISR
+00007070   _XIntruptRegs
+00000b20   _XintfRegs
+000090b5   _ZeroMem
+00000400   __STACK_SIZE
+ffffffff   ___binit__
+00000000   ___bss__
+ffffffff   ___c_args__
+003f96b4   ___cinit__
+00000000   ___data__
+00000000   ___edata__
+00000000   ___end__
+000099cf   ___etext__
+ffffffff   ___pinit__
+00008000   ___text__
+00008097   __args_main
+003f93c4   __cleanup_ptr
+0000817e   __dDump
+0000817a   __dDumpMem
+0000823c   __dFormatCoil
+0000822b   __dFormatIns
+003f93c2   __dtors_ptr
+003f948e   __lock
+0000808e   __nop
+0000808f   __register_lock
+00008093   __register_unlock
+00008d24   __scia_RxInt
+00008d5c   __scia_TxInt
+00008d9a   __scib_RxInt
+00008da5   __scib_TxInt
+003f948c   __unlock
+0000808d   _abort
+0000806c   _atexit
+00008000   _c_int00
+003f5b20   _cinit_loadstart
+003f96b4   _cinit_runstart
+00000058   _cinit_size
+003f59d0   _const_loadstart
+003f8000   _const_runstart
+00000000   _const_size
+000082c8   _dFormatProgram
+00008183   _dGetFormatCoil
+003f8000   _debug_Ram
+003f93a6   _devSci
+003f59d0   _econst_loadstart
+003f9564   _econst_runstart
+00000150   _econst_size
+00008044   _exit
+003f8200   _g_pBitMap
+003f8540   _g_pByteMap
+003f8b00   _g_sys
+00008bbc   _main
+00009992   _memset
+003f4000   _pinit_loadstart
+003f8000   _pinit_runstart
+00000000   _pinit_size
+003f9500   _plcprg
+00008a03   _rsvd_ISR
+003f4000   _switch_loadstart
+003f8000   _switch_runstart
+00000000   _switch_size
+003f94c0   _szprg
+003f4000   _text_loadstart
+00008000   _text_runstart
+000019cf   _text_size
+ffffffff   binit
+003f96b4   cinit
+003f7ff6   code_start
+003f5b78   copy_sections
+00000000   edata
+00000000   end
+000099cf   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   _switch_size
+00000000   ___edata__
+00000000   ___data__
+00000000   _const_size
+00000000   ___end__
+00000000   _pinit_size
+00000000   .bss
+00000000   .data
+00000000   ___bss__
+00000000   edata
+00000000   end
+00000058   _cinit_size
+00000150   _econst_size
+00000400   __STACK_SIZE
+00000880   _DevEmuRegs
+00000a80   _FlashRegs
+00000ae0   _CsmRegs
+00000b20   _XintfRegs
+00000c00   _CpuTimer0Regs
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+000019cf   _text_size
+00006000   _ECanaRegs
+00006040   _ECanaLAMRegs
+00006080   _ECanaMOTSRegs
+000060c0   _ECanaMOTORegs
+00006100   _ECanaMboxes
+00007010   _SysCtrlRegs
+00007040   _SpiaRegs
+00007050   _SciaRegs
+00007070   _XIntruptRegs
+000070c0   _GpioMuxRegs
+000070e0   _GpioDataRegs
+00007100   _AdcRegs
+00007400   _EvaRegs
+00007500   _EvbRegs
+00007750   _ScibRegs
+00007800   _McbspaRegs
+00008000   _text_runstart
+00008000   ___text__
+00008000   _c_int00
+00008000   .text
+00008044   _exit
+0000806a   C$$EXIT
+0000806c   _atexit
+0000808d   _abort
+0000808e   __nop
+0000808f   __register_lock
+00008093   __register_unlock
+00008097   __args_main
+0000817a   __dDumpMem
+0000817e   __dDump
+00008183   _dGetFormatCoil
+000081d0   _StrReadData
+0000822b   __dFormatIns
+0000823c   __dFormatCoil
+000082c8   _dFormatProgram
+000082dc   _API_LoadProgram
+000083b6   _API_UnLoadProgram
+000083c9   _API_PLCScan
+0000886e   _InitCpuTimers
+00008885   _ConfigCpuTimer
+000088b9   _INT13_ISR
+000088be   _INT14_ISR
+000088c3   _DATALOG_ISR
+000088c8   _RTOSINT_ISR
+000088cd   _EMUINT_ISR
+000088d2   _NMI_ISR
+000088d7   _ILLEGAL_ISR
+000088dc   _USER1_ISR
+000088e1   _USER2_ISR
+000088e6   _USER3_ISR
+000088eb   _USER4_ISR
+000088f0   _USER5_ISR
+000088f5   _USER6_ISR
+000088fa   _USER7_ISR
+000088ff   _USER8_ISR
+00008904   _USER9_ISR
+00008909   _USER10_ISR
+0000890e   _USER11_ISR
+00008913   _USER12_ISR
+00008918   _PDPINTA_ISR
+0000891d   _PDPINTB_ISR
+00008922   _XINT1_ISR
+00008927   _XINT2_ISR
+0000892c   _ADCINT_ISR
+00008931   _TINT0_ISR
+00008936   _WAKEINT_ISR
+0000893b   _CMP1INT_ISR
+00008940   _CMP2INT_ISR
+00008945   _CMP3INT_ISR
+0000894a   _T1PINT_ISR
+0000894f   _T1CINT_ISR
+00008954   _T1UFINT_ISR
+00008959   _T1OFINT_ISR
+0000895e   _T2PINT_ISR
+00008963   _T2CINT_ISR
+00008968   _T2UFINT_ISR
+0000896d   _T2OFINT_ISR
+00008972   _CAPINT1_ISR
+00008977   _CAPINT2_ISR
+0000897c   _CAPINT3_ISR
+00008981   _CMP4INT_ISR
+00008986   _CMP5INT_ISR
+0000898b   _CMP6INT_ISR
+00008990   _T3PINT_ISR
+00008995   _T3CINT_ISR
+0000899a   _T3UFINT_ISR
+0000899f   _T3OFINT_ISR
+000089a4   _T4PINT_ISR
+000089a9   _T4CINT_ISR
+000089ae   _T4UFINT_ISR
+000089b3   _T4OFINT_ISR
+000089b8   _CAPINT4_ISR
+000089bd   _CAPINT5_ISR
+000089c2   _CAPINT6_ISR
+000089c7   _SPIRXINTA_ISR
+000089cc   _SPITXINTA_ISR
+000089d1   _MRINTA_ISR
+000089d6   _MXINTA_ISR
+000089db   _SCIRXINTA_ISR
+000089e0   _SCITXINTA_ISR
+000089e5   _SCIRXINTB_ISR
+000089ea   _SCITXINTB_ISR
+000089ef   _ECAN0INTA_ISR
+000089f4   _ECAN1INTA_ISR
+000089f9   _EMPTY_ISR
+000089fe   _PIE_RESERVED
+00008a03   _rsvd_ISR
+00008a08   _InitGpio
+00008a15   _InitPeripherals
+00008a1a   _InitPieCtrl
+00008a39   _EnableInterrupts
+00008a42   _InitPieVectTable
+00008a62   _InitSci
+00008a63   _InitSysCtrl
+00008a6b   _InitFlash
+00008a82   _KickDog
+00008a8c   _DisableDog
+00008a94   _InitPll
+00008ab1   _InitPeripheralClocks
+00008acb   _CsmUnlock
+00008afc   _InitXintf
+00008b92   _ProtocolSend
+00008b9f   _ISRTimer0
+00008bbc   _main
+00008d24   __scia_RxInt
+00008d5c   __scia_TxInt
+00008d9a   __scib_RxInt
+00008da5   __scib_TxInt
+00008db0   _Sci_Init
+00008ef1   _Sci_DbufSend
+00008f17   _GetBitMapSize
+00008f49   _GetByteMapSize
+00008f5e   _UpdateMem
+000090b5   _ZeroMem
+0000913a   _BitStackInit
+00009150   _BitStackPush
+00009167   _BitStackPop
+00009170   _BitStackRead
+0000917a   _BitQueueInit
+0000918f   _BitEnQueue
+000091ad   _BitDeQueue
+000091c9   _StackInit
+000091df   _StackPush
+000091f8   _StackPop
+00009201   _StackRead
+00009212   _MallcoTimerNod
+0000922d   _AddToTimerList
+00009281   _ReMoveTimerNod
+000092cb   _ResetTimerList
+000092e8   _API_TimerUp
+000093b6   _UpdateRegBlocksz
+000093d7   _UpdateStata
+00009401   _UpdateLastStata
+00009471   _API_ReadBit
+00009486   _API_WriteBit
+0000949f   _API_ReadData
+000094d6   _API_WriteData
+0000950b   _API_IsPLCRuning
+00009513   _API_ProGramRead
+00009526   _API_ProGramWrite
+00009538   _API_UninitSystem
+00009547   _API_InitSystem
+0000959c   _API_PLCRun
+000095bd   _API_SetComWriteFun
+000095c8   _API_SetOutputFun
+000095d0   _API_SetUpdatIOMapFun
+000095f4   _Asiic2Hex
+00009634   _API_ProtocolSend
+00009687   _ProcessData
+000097c4   _API_Protocol
+00009847   _API_InitProtocol
+0000984e   _SetProtocolConf
+0000986f   FS$$DIV
+000098f2   FS$$MPY
+0000994c   FS$$TOL
+00009975   FS$$TOU
+00009992   _memset
+000099a1   U$$DIV
+000099a6   U$$MOD
+000099ac   U$$TOFS
+000099bc   UL$$TOFS
+000099cf   ___etext__
+000099cf   etext
+003f4000   _switch_loadstart
+003f4000   _text_loadstart
+003f4000   _pinit_loadstart
+003f59d0   _econst_loadstart
+003f59d0   _const_loadstart
+003f5b20   _cinit_loadstart
+003f5b78   copy_sections
+003f7ff6   code_start
+003f7ff8   _CsmPwl
+003f8000   _switch_runstart
+003f8000   _debug_Ram
+003f8000   _const_runstart
+003f8000   _pinit_runstart
+003f8200   _g_pBitMap
+003f8540   _g_pByteMap
+003f8b00   _g_sys
+003f93a2   _KEY_SEL_REG
+003f93a4   _LEDReg
+003f93a6   _devSci
+003f93b6   _CpuTimer0
+003f93c2   __dtors_ptr
+003f93c4   __cleanup_ptr
+003f948c   __unlock
+003f948e   __lock
+003f94c0   _szprg
+003f9500   _plcprg
+003f9564   _econst_runstart
+003f9564   _PieVectTableInit
+003f96b4   cinit
+003f96b4   ___cinit__
+003f96b4   _cinit_runstart
+003fffc2   _DSP28x_usDelay
+ffffffff   ___binit__
+ffffffff   pinit
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   ___c_args__
+
+[242 symbols]
